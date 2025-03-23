@@ -1,48 +1,80 @@
-# Energy-Efficient Scheduler
-This project implements an **Energy-Efficient CPU Scheduling Algorithm** using the **Round Robin Scheduling Algorithm**.
-The goal is to minimize energy consumption while efficiently handling multiple processes.
+CPU Scheduling Simulator
 
-### Features
-Prioritizes low-energy-consuming processes
-Introduces a low-power mode when the CPU is idle
-Tracks and visualizes total energy consumption per process
-Displays real-time CPU performance using `psutil`
+This project is a comprehensive CPU Scheduling Simulator that implements four key scheduling algorithms:
 
-## How to Run
-1. **Install Dependencies**
-   Run the following command to install required libraries: pip install matplotlib psutil
+First-Come, First-Served (FCFS)Shortest Job First (SJF)Priority SchedulingRound Robin
 
-2. **Clone the Repository**
-git clone https://github.com/SharadPal21/EnergyEfficientScheduler.git
+The simulator provides a menu-based interface for easy selection and visualizes each algorithm's execution with a Gantt Chart and performance metrics like Average Waiting Time (AWT) and Average Turnaround Time (ATAT).
 
-3. **Navigate to the Project Folder**
+Features
+
+User Input: Supports entering process details directly in the console.
+
+Gantt Chart Visualization: Displays the process execution timeline.
+
+Detailed Performance Metrics: Calculates AWT and ATAT for each algorithm.
+
+Robust Error Handling: Ensures valid inputs are accepted.
+
+How to Run the Project
+
+Step 1: Clone the Repository :git clone https://github.com/SharadPal21/EnergyEfficientScheduler.git
+
 cd EnergyEfficientScheduler
 
-4. **Run the Code**
+Step 2: Install the Required Packages : pip install matplotlib pandas numpy
+
+Step 3: Run the Simulator
 python scheduler.py
 
-## Sample Output
-Executing P1 for 4 units.
-P1 consumed 4 units. (Total Energy: 4)
-Executing P2 for 4 units.
-P2 consumed 8 units. (Total Energy: 12)
-Executing P3 for 4 units.
-P3 consumed 12 units. (Total Energy: 24)
-Executing P4 for 4 units.
-P4 consumed 4 units. (Total Energy: 28)
-CPU entering low-power mode...
-Total Energy Consumed: 28 units
+Step 4: Select an Algorithm
+    From the menu, choose:
+        1. First-Come, First-Served (FCFS)
+        2. Shortest Job First (SJF)
+        3. Priority Scheduling
+        4. Round Robin
+        5. Exit
 
-## Visualizations
-- **Energy Consumption Bar Chart:** Displays energy usage for each process.
-- **CPU Usage Graph:** Tracks real-time CPU performance during scheduling.
+Step 5: Follow the Prompts
+    Enter process details such as:
 
-## Future Enhancements
-- Introduce **Dynamic Time Quantum** for improved efficiency.
-- Add a **Priority Queue** to prioritize high-priority tasks.
-- Implement a **GUI Interface** for better user experience.
+        Arrival Time
 
-## Author
-**Sharad Pal**
-Lovely Professional University
-India
+        Burst Time
+
+        Priority
+
+        Power Level
+
+Step 6: View Results
+
+The system will display:
+Gantt ChartAverage Waiting Time (AWT)Average Turnaround Time (ATAT)
+
+Sample Commands for Execution
+
+Run each algorithm independently:
+python algorithms/fcfs.py
+python algorithms/sjf.py
+python algorithms/priority.py
+python algorithms/round_robin.py
+
+Project Structure
+EnergyEfficientScheduler/
+├── algorithms/
+│   ├── fcfs.py
+│   ├── sjf.py
+│   ├── priority.py
+│   ├── round_robin.py
+│
+├── utils.py
+├── scheduler.py
+├── README.md
+
+GitHub Workflow
+
+7+ Commits: Each feature and improvement was committed with clear messages.Branching Strategy: Each algorithm was developed in its own branch and merged into main after testing.Public Repository: Accessible to anyone for evaluation and review.
+
+Support
+
+For any questions or improvements, feel free to raise an issue or contribute directly.
