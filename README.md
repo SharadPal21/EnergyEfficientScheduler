@@ -9,16 +9,16 @@ Tracks and visualizes total energy consumption per process
 Displays real-time CPU performance using `psutil`
 
 ## How to Run
-1. **Install Dependencies**  
+1. **Install Dependencies**
    Run the following command to install required libraries: pip install matplotlib psutil
 
-2. **Clone the Repository**  
+2. **Clone the Repository**
 git clone https://github.com/SharadPal21/EnergyEfficientScheduler.git
 
-3. **Navigate to the Project Folder**  
+3. **Navigate to the Project Folder**
 cd EnergyEfficientScheduler
 
-4. **Run the Code**  
+4. **Run the Code**
 python scheduler.py
 
 ## Sample Output
@@ -34,15 +34,15 @@ CPU entering low-power mode...
 Total Energy Consumed: 28 units
 
 ## Visualizations
-- **Energy Consumption Bar Chart:** Displays energy usage for each process.  
-- **CPU Usage Graph:** Tracks real-time CPU performance during scheduling.  
+- **Energy Consumption Bar Chart:** Displays energy usage for each process.
+- **CPU Usage Graph:** Tracks real-time CPU performance during scheduling.
 
 ## Future Enhancements
-- Introduce **Dynamic Time Quantum** for improved efficiency.  
-- Add a **Priority Queue** to prioritize high-priority tasks.  
-- Implement a **GUI Interface** for better user experience.  
+- Introduce **Dynamic Time Quantum** for improved efficiency.
+- Add a **Priority Queue** to prioritize high-priority tasks.
+- Implement a **GUI Interface** for better user experience.
 
 ## Author
-**Sharad Pal**  
-Lovely Professional University  
+**Sharad Pal**
+Lovely Professional University
 India
