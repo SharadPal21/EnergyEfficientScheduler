@@ -1,0 +1,186 @@
+/* 🔤 Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #f1f5f9;
+  min-height: 100vh;
+}
+
+/* 🔷 Header */
+header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+header p {
+  color: #94a3b8;
+  margin-top: 8px;
+}
+
+/* 📦 Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+}
+
+/* 🧾 Cards */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #38bdf8;
+}
+
+/* 🧮 Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* ✏️ Inputs */
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+/* 🔘 Buttons */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* ➕ Add Button */
+.primary-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #16a34a;
+}
+
+/* ▶ Run Button */
+.run-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.run-btn:hover {
+  background: #2563eb;
+}
+
+/* 🗑 Clear Button */
+.clear-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.clear-btn:hover {
+  background: #dc2626;
+}
+
+/* 🔘 Button Group */
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* 📋 Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+th {
+  background: #0ea5e9;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
+
+tr:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* 📊 Metrics Box */
+.metrics-box {
+  background: rgba(14, 165, 233, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* 📈 Chart */
+canvas {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* 🔻 Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+}

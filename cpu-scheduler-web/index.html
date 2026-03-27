@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPU Scheduling Simulator</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 🔷 Header -->
+  <header>
+    <h1>⚡ CPU Scheduling Simulator</h1>
+    <p>Visualize scheduling algorithms with real-time Gantt charts</p>
+  </header>
+
+  <!-- 🔶 Main Container -->
+  <div class="container">
+
+    <!-- 🧾 Input Card -->
+    <div class="card">
+      <h2>Add Process</h2>
+
+      <div class="form-grid">
+        <input id="name" placeholder="Process Name (P1)">
+        <input id="arrival" type="number" placeholder="Arrival Time">
+        <input id="burst" type="number" placeholder="Burst Time">
+        <input id="priority" type="number" placeholder="Priority">
+      </div>
+
+      <button class="primary-btn" onclick="addProcess()">➕ Add Process</button>
+    </div>
+
+    <!-- ⚙️ Algorithm Card -->
+    <div class="card">
+      <h2>Scheduling Controls</h2>
+
+      <div class="form-grid">
+        <select id="algorithm">
+          <option value="fcfs">First Come First Serve (FCFS)</option>
+          <option value="sjf">Shortest Job First (SJF)</option>
+          <option value="priority">Priority Scheduling</option>
+          <option value="rr">Round Robin</option>
+        </select>
+
+        <input id="quantum" type="number" placeholder="Time Quantum (RR only)" style="display:none;">
+      </div>
+
+      <div class="button-group">
+        <button class="run-btn" onclick="runScheduler()">▶ Run Simulation</button>
+        <button class="clear-btn" onclick="clearProcesses()">🗑 Clear</button>
+      </div>
+    </div>
+
+    <!-- 📋 Process Table -->
+    <div class="card">
+      <h2>Process Table</h2>
+
+      <table id="processTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Arrival</th>
+            <th>Burst</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Results -->
+    <div class="card">
+      <h2>Results</h2>
+
+      <div id="metrics" class="metrics-box">
+        <p>Run a simulation to see results</p>
+      </div>
+
+      <canvas id="ganttChart"></canvas>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p> CPU Scheduling Simulator</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
